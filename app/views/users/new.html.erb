@@ -1,0 +1,14 @@
+
+ <h2>Create New Account</h2>
+
+  <% if @user.errors.any?  %>
+    <p>Please correct the folowing errors:</p>
+    <ul>
+      <% @user.errors.full_messages.each do |e| %>
+      <li><%= e %></li>
+        <% end %>
+    </ul>
+
+  <% end  %>
+
+  <%= render partial: 'form' %>
