@@ -26,5 +26,11 @@
 
   <br>
 
+  <% User.all.each do |u| %>
+    <%= f.check_box :user_ids, { multiple: true}, u.id, false  %>
+    <%= u.name %>
+    <br />
+  <% end %>
+
   <%= f.submit %>
 <% end  %>

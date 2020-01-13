@@ -1,0 +1,14 @@
+<h2>
+<%= @bug.name %>
+</h2>
+
+<%= link_to 'Edit Bug', edit_bug_path(@bug.id) %>
+
+<%= link_to 'Delete Bug', bug_path(@bug.id), method: 'delete' %>
+
+<p><strong>Priority</strong>: <%= @bug.priority  %></p>
+  <p><strong>Team Member</strong>: <%= @bug.team_member  %></p>
+  <p><strong>Status</strong>: <%= @bug.status  %></p>
+  <p><strong>Start Date</strong>: <%= @bug.start_date  %></p>
+  <p><strong>Due Date</strong>: <%= @bug.due_date  %></p>
+  <p><strong>Project ID</strong>: <%= @bug.project_id  %></p>

@@ -1,0 +1,27 @@
+
+<%= form_for @bug do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br />
+  <%= f.label :priority %>
+  <%= f.text_field :priority %>
+  <br />
+
+  <%= f.label :teamMember %>
+  <%= f.text_field :teamMember %>
+  <br />
+
+  <%= f.label :startDate %>
+  <%= f.text_field :startDate %>
+  <br />
+
+  <%= f.label :dueDate %>
+  <%= f.text_field :dueDate %>
+  <br />
+
+  <%= f.label :projectId %>
+  <%= f.text_field :projectId %>
+  <br />
+
+<% end  %>

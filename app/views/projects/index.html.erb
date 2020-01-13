@@ -5,7 +5,6 @@
   <li>
     <%= link_to project.name, project_path(project.id) %>
 
-    <!-- you only see an idit link for mixtapes you have created -->
     <% if project.users.includes @current_user || @current_user.admin == true %>
       <%= link_to 'edit', edit_project_path(project.id) %>
     <% end %>

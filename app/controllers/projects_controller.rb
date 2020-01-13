@@ -8,6 +8,8 @@ class ProjectsController < ApplicationController
 
   def create
 
+    # raise 'hell'
+    
     # 1.
     #project = Project.create name: params[:project][:name], user: @current_user
 

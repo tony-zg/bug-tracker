@@ -24,15 +24,15 @@
   p4.users << u2 << u3
   p5.users << u3 << u1
 
-  # Bug.destroy_all
-  #
-  #   p1 = Bug.create! name: 'Bug A'
-  #   p2 = Bug.create! name: 'Bug B'
-  #   p3 = Bug.create! name: 'Bug C'
-  #   p4 = Bug.create! name: 'Bug D'
-  #   p5 = Bug.create! name: 'Bug E'
-  #
-  #   puts "Created #{ Bug.count } bugs."
+  Bug.destroy_all
+
+    b1 = Bug.create! name: 'Bug A', project: p1
+    b2 = Bug.create! name: 'Bug B', project: p1
+    b3 = Bug.create! name: 'Bug C', project: p2
+    b4 = Bug.create! name: 'Bug D', project: p2
+    b5 = Bug.create! name: 'Bug E', project: p3
+
+    puts "Created #{ Bug.count } bugs."
   #
   # StaffMember.destroy_all
   #
