@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   #Certain pages are visible only to logged-in users:
-  before_action :check_if_logged_in, except: [ :new ]
+  before_action :check_if_logged_in, except: [ :new, :create ]
 
   #Lock down admin pages
   before_action :check_if_admin, only: [ :index ]
@@ -40,6 +40,7 @@ class UsersController < ApplicationController
   def show
 
     @user = User.find params[:id]
+
   end
 
   def edit

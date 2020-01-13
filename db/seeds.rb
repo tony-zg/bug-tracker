@@ -6,17 +6,24 @@
 
     puts "Created #{ User.count } users."
 
+
   Project.destroy_all
 
-    p1 = Project.create! name: 'Project A', user: u1
-    p2 = Project.create! name: 'Project B', user: u1
-    p3 = Project.create! name: 'Project C', user: u2
-    p4 = Project.create! name: 'Project D', user: u2
-    p5 = Project.create! name: 'Project E', user: u3
+    p1 = Project.create! name: 'Project A'
+    p2 = Project.create! name: 'Project B'
+    p3 = Project.create! name: 'Project C'
+    p4 = Project.create! name: 'Project D'
+    p5 = Project.create! name: 'Project E'
 
     # u1.projects << p1 << p2
 
   puts "Created #{ Project.count } projects."
+
+  p1.users << u1
+  p2.users << u1
+  p3.users << u2
+  p4.users << u2
+  p5.users << u3
 
   # Bug.destroy_all
   #

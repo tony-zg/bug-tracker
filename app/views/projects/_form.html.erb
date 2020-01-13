@@ -1,0 +1,25 @@
+
+<%= form_for @project do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :priority %>
+  <%= f.text_field :priority %>
+
+  <%= f.label :to, 'Assigned to' %>
+  <%= f.text_field :to %>
+
+  <%= f.label :frontend %>
+  <%= f.text_field :frontend %>
+
+  <%= f.label :backend %>
+  <%= f.text_field :backend %>
+
+  <%= f.label :customer %>
+  <%= f.text_field :customer %>
+
+  <br>
+
+  <%= f.submit %>
+<% end  %>

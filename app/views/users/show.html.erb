@@ -1,2 +1,17 @@
+<% if @user.admin == true  %>
+<%= link_to 'All Users', users_path, method: 'get' %>
+|
+<%= link_to 'All Projects', projects_path, method: 'get' %>
+<% end  %>
+
 
 <h2>Profile Page for <%= @user.name %></h2>
+
+
+<ul>
+  <% @user.projects.each do |project| %>
+  <li>
+    <%= link_to project.name, project_path(project.id) %>
+    <% end  %>
+  </li>
+</ul>
