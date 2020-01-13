@@ -16,7 +16,7 @@ class ProjectsController < ApplicationController
     #@current_user.projects << project
 
     # 3.
-    @current_user.projects.create name: params[:project][:name]
+    @current_user.projects.create project_params
 
     redirect_to projects_path #index of projects
   end
@@ -51,6 +51,9 @@ class ProjectsController < ApplicationController
   end
 
   def destroy
+    Project.destroy params[:id]
+
+  redirect_to projects_path
   end
 
   private
@@ -58,5 +61,9 @@ class ProjectsController < ApplicationController
     redirect_to login_path and return unless @project.users.includes @current_user
   end
 
+  private
+  def project_params
+    params.require(:project).permit( :name, :priority, :to, :frontend, :backend, :customer )
+  end
 
 end
