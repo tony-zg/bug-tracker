@@ -4,11 +4,15 @@ class BugsController < ApplicationController
 
   def new
     @bug = Bug.new
+    # @project = Project.find params[:id] #it will work when you make add button in projects show page
+
   end
 
   def create
-    @current_project.bugs.create bug_params
-
+    bug = Bug.create bug_params
+    bug.user == @current_user
+    # project = params
+    project << bug
     redirect_to bugs_path
   end
 
@@ -28,15 +32,15 @@ class BugsController < ApplicationController
   def update
     @bug = Bug.find params[:id]
 
-    redirect_to login_path and return unless @bug.project @current_project
+    check_ownership
 
     # Actually update the database
 
     # @bug.name = params[:name]
     # raise 'hell'
-      @bug.update name: params[:bug][:name]
+      @bug.update bug_params
 
-    redirect_to bug_path(@bug.id)
+    redirect_to project_path(@bug.project.id)
   end
 
   def destroy
@@ -47,7 +51,7 @@ class BugsController < ApplicationController
 
   private
   def check_ownership
-    redirect_to new_bug_path and return unless @bug.project == @current_project
+    redirect_to login_path and return unless @current_user.present? && ( @current_user.admin? || @bug.user == @current_user || @bug.project.user == @current_user )
   end
 
   private

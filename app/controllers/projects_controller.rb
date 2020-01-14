@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
 
-  before_action :check_if_logged_in, except: [ :index, :show ]
+  before_action :check_if_logged_in
 
   def new
     @project = Project.new
@@ -9,7 +9,7 @@ class ProjectsController < ApplicationController
   def create
 
     # raise 'hell'
-    
+
     # 1.
     #project = Project.create name: params[:project][:name], user: @current_user
 
@@ -47,7 +47,7 @@ class ProjectsController < ApplicationController
 
     # @project.name = params[:name]
     # raise 'hell'
-      @project.update name: params[:project][:name]
+      @project.update project_params
 
     redirect_to project_path(@project.id)
   end
@@ -65,7 +65,7 @@ class ProjectsController < ApplicationController
 
   private
   def project_params
-    params.require(:project).permit( :name, :priority, :to, :frontend, :backend, :customer )
+    params.require(:project).permit( :name, :priority, :to, :frontend, :backend, :customer, user_ids: [] )
   end
 
 end
