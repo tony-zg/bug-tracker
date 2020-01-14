@@ -9,10 +9,8 @@ class BugsController < ApplicationController
   end
 
   def create
-    bug = Bug.create bug_params
-    bug.user == @current_user
-    # project = params
-    project << bug
+    @bug = Bug.create params[:id]
+    check_ownership
     redirect_to bugs_path
   end
 

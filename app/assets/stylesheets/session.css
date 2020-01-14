@@ -1,0 +1,19 @@
+.login{
+  text-align: center;
+}
+
+input[type=text] {
+
+}
+
+input[type=text]:focus {
+  width: 40%;
+}
+
+label {
+
+}
+
+input[type=submit] {
+
+}

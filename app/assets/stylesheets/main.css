@@ -1,0 +1,24 @@
+body {
+  font-family: Charlie Display, BlinkMacSystemFont,Segoe UI,Roboto,Noto Sans,Ubuntu,Droid Sans,Helvetica Neue,sans-serif;
+  font-style: normal;
+  color: #253858;
+  margin-left: 1rem;
+}
+
+.intro {
+  text-align: center;
+}
+
+a {
+  color:rgb(214, 225, 255)
+  text-decoration: none;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+footer {
+  text-align: center;
+}

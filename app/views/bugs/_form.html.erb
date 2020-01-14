@@ -8,10 +8,6 @@
   <%= f.text_field :priority %>
   <br />
 
-  <%= f.label :team_member %>
-  <%= f.text_field :team_member %>
-  <br />
-
   <%= f.label :start_date %>
   <%= f.text_field :start_date %>
   <br />
@@ -21,5 +17,13 @@
   <br />
 
   <br />
+
+  <% User.all.each do |u| %>
+    <%= f.check_box :user_ids, { multiple: true}, u.id, false  %>
+    <%= u.name %>
+    <br />
+    <br />
+  <% end %>
+
   <%= f.submit  %>
 <% end  %>
