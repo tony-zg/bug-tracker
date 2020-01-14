@@ -26,11 +26,11 @@
 
   Bug.destroy_all
 
-    b1 = Bug.create! name: 'Bug A', project: p1
-    b2 = Bug.create! name: 'Bug B', project: p1
+    b1 = Bug.create! name: 'Bug A', project: p3
+    b2 = Bug.create! name: 'Bug B', project: p3
     b3 = Bug.create! name: 'Bug C', project: p2
     b4 = Bug.create! name: 'Bug D', project: p2
-    b5 = Bug.create! name: 'Bug E', project: p3
+    b5 = Bug.create! name: 'Bug E', project: p1
 
     puts "Created #{ Bug.count } bugs."
   #

@@ -5,7 +5,6 @@
   <li>
     <%= link_to bug.name, bug_path(bug.id) %>
 
-
     <% if bug.projects @current_project || @current_project.admin == true %>
       <%= link_to 'edit', edit_bug_path(bug.id) %>
     <% end %>

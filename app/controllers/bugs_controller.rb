@@ -3,7 +3,7 @@ class BugsController < ApplicationController
   before_action :check_if_logged_in, except: [ :index, :show ]
 
   def new
-    @bugs = Bug.new
+    @bug = Bug.new
   end
 
   def create
@@ -47,7 +47,7 @@ class BugsController < ApplicationController
 
   private
   def check_ownership
-    redirect_to login_path and return unless @bug.project @current_project
+    redirect_to new_bug_path and return unless @bug.project == @current_project
   end
 
   private
