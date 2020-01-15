@@ -45,9 +45,16 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find params[:id]
+    check_ownership
   end
 
   def update
+    @user = User.find params[:id]
+    check_ownership
+
+    @user.update user_params
+
+  redirect_to user_path(@user.id)
   end
 
   def destroy
@@ -58,5 +65,8 @@ class UsersController < ApplicationController
     params.require(:user).permit( :name, :email, :password, :password_confirmation )
   end
 
+  def check_ownership
+    redirect_to login_path and return unless @current_user.present? &&  @current_user.admin?
+  end
 
 end

@@ -3,15 +3,21 @@ class BugsController < ApplicationController
   before_action :check_if_logged_in, except: [ :index, :show ]
 
   def new
+    #bringing the project_id from the project show page and we're getting the project info from DB
+    @project = Project.find params[:project_id]
+    #initializing a new Bug
     @bug = Bug.new
-    # @project = Project.find params[:id] #it will work when you make add button in projects show page
+    #saving project as the new bug project
+    @bug.project = @project
 
   end
 
   def create
-    @bug = Bug.create params[:id]
-    check_ownership
-    redirect_to bugs_path
+    params[:bug][:user_id] = @current_user.id
+    @bug = Bug.create bug_params
+
+    # check_ownership
+    redirect_to project_path(@bug.project_id)
   end
 
   def index
