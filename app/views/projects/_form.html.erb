@@ -1,23 +1,41 @@
 
+
 <%= form_for @project do |f| %>
 
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <br />
-  <%= f.label :priority %>
-  <%= f.text_field :priority %>
-  <br />
-  <%= f.label :frontend %>
-  <%= f.text_field :frontend %>
-  <br />
+  <tr>
+    <td class="labels"><%= f.label :name %></td>
+    <td class="labels_box"><%= f.text_field :name %></td>
+  </tr>
 
-  <%= f.label :backend %>
-  <%= f.text_field :backend %>
-  <br />
+  <tr>
+    <td class="labels">
+      <%= f.label :priority %></td>
+    <td class="labels_box">
+    <%= f.select :priority,['Low','Medium','High'] %>
+    </td>
+  </tr>
 
-  <%= f.label :customer %>
-  <%= f.text_field :customer %>
-  <br />
+
+
+  <tr>
+    <td class="labels"><%= f.label :to,'Assigned to' %></td>
+    <td class="labels_box"><%= f.text_field :to %></td>
+  </tr>
+
+  <tr>
+    <td class="labels"><%= f.label :frontend %></td>
+    <td class="labels_box"><%= f.text_field :frontend %></td>
+  </tr>
+
+  <tr>
+    <td class="labels"><%= f.label :backend %></td>
+    <td class="labels_box"><%= f.text_field :backend %></td>
+  </tr>
+
+  <tr>
+    <td class="labels"><%= f.label :customer %></td>
+    <td class="labels_box"><%= f.text_field :customer %></td>
+  </tr>
 
   <br>
 

@@ -2,7 +2,7 @@
 <%= @project.name %>
 </h2>
 
-<%= link_to 'All Project', projects_path %>
+<%= link_to 'All Projects', projects_path %>
 |
 <%= link_to 'Edit Project', edit_project_path(@project.id) %>
 |
@@ -16,23 +16,35 @@
   <p><strong>Backend</strong>: <%= @project.backend  %></p>
   <p><strong>Customer</strong>: <%= @project.customer  %></p>
 
+<h2>Project Team members</h2>
+
+  <ul>
+    <% if @project.users.present?  %>
+      <% @project.users.each do |user| %>
+      <li>
+        <%= user.name %>
+      </li>
+        <% end %>
+    <% end %>
+  </ul>
+
 
 <h2>All Bugs</h2>
 
 <ul>
   <% if @project.bugs.present?  %>
-  <% @project.bugs.each do |bug| %>
-    <li>
-      <%= link_to bug.name, bug_path(bug.id) %>
+    <% @project.bugs.each do |bug| %>
+        <li>
+          <%= link_to bug.name, bug_path(bug.id) %>
 
-      <% if @current_user.present? && ( @current_user.admin? || bug.user == @current_user || bug.project.user == @current_user ) %>
+            <% if bug.project.users.includes @current_user || @current_user.admin? %>
 
-        <%= link_to "Edit", edit_bug_path(bug.id) %>
-      <% end %>
-    </li>
+            <%= link_to "Edit", edit_bug_path(bug.id) %>
+            <% end %>
+        </li>
     <% end %>
 
-    <% else %>
+  <% else %>
       <p>This project has no bugs.</p>
-    <% end %>
+  <% end %>
 </ul>

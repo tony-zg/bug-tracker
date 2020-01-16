@@ -1,11 +1,11 @@
 body {
   font-family: Charlie Display, BlinkMacSystemFont,Segoe UI,Roboto,Noto Sans,Ubuntu,Droid Sans,Helvetica Neue,sans-serif;
   font-style: normal;
-  color: #253858;
+  color: #23374d;
 }
 
 a {
-  color:rgb(214, 225, 255)
+  color: #1089ff;
   text-decoration: none;
 }
 
@@ -15,13 +15,7 @@ a:hover {
 }
 
 input[type=text] {
-  width: 40%;
-padding: 12px 20px;
-margin: 8px 0;
-display: inline-block;
-border: 1px solid #ccc;
-border-radius: 4px;
-box-sizing: border-box;
+
 }
 
 input[type=text]:focus {

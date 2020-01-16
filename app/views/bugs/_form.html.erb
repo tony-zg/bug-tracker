@@ -7,25 +7,34 @@
   <%= f.text_field :name %>
   <br />
   <%= f.label :priority %>
-  <%= f.text_field :priority %>
+  <%= f.select :priority,['Low','Medium','High'] %>
   <br />
+  
+  <%= f.label :to, 'Assigned to' %>
+  <select name="bug[user_id]" id="">
+    <% @bug.project.users.each do |user| %>
+    <option value="<%= user.id %>"><%= user.name %></option>
+    <% end %>
+  </select>
 
+  <%= f.label :status %>
+  <%= f.text_field :status %>
+  <br />
   <%= f.label :start_date %>
-  <%= f.text_field :start_date %>
+  <%= f.date_field :start_date %>
   <br />
 
   <%= f.label :due_date %>
-  <%= f.text_field :due_date %>
+  <%= f.date_field :due_date %>
   <br />
 
   <br />
 
-  <% @bug.project.users.each do |u| %>
-    <%= f.check_box :user_id, { multiple: true}, u.id, false  %>
-    <%= u.name %>
-    <br />
-    <br />
-  <% end %>
+
+
+
+  <br />
+  <br />
 
   <%= f.submit  %>
 <% end  %>

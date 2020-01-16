@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'google/map'
   root :to => 'pages#home'
 
   get '/login' => 'session#new'         # This will be our sign-in page.

@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_13_032805) do
+ActiveRecord::Schema.define(version: 2020_01_16_042233) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "bugs", force: :cascade do |t|
     t.text "name"
-    t.integer "priority"
+    t.text "priority"
     t.text "team_member"
     t.text "status"
     t.date "start_date"
@@ -54,6 +54,9 @@ ActiveRecord::Schema.define(version: 2020_01_13_032805) do
     t.boolean "admin"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "address"
+    t.float "latitude"
+    t.float "longitude"
   end
 
 end

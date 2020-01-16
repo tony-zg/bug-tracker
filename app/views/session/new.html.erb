@@ -1,24 +1,36 @@
 
-<div class=login>
-  
-  <% if flash[:error] %>
-  <!-- print out any error message for the user -->
-  <br>
-  <strong><%= flash[:error] %></strong>
-  <br>
-  <br>
-  <% end %>
+<div class=container>
+  <div class=login>
+
+  <h2>Login now</h2>
+
+    <%= form_tag login_path do %>
+    <table style="width:100%">
+
+    <tr>
+      <td class="labels"><%= label_tag :email %></td>
+      <td class="labels_box"><%= email_field_tag :email %></td>
+
+    </tr>
+    <tr>
+      <td class="labels"><%= label_tag :password %></td>
+      <td class="labels_box"><%= password_field_tag :password %></td>
+
+    </tr>
+  </table>
+<br />
+
+    <% if flash[:error] %>
+<!-- print out any error message for the user -->
+
+      <%= flash[:error] %>
+    <br>
+    <br>
+    <% end %>
+
+    <div class="button"><%= submit_tag 'Login' %></div>
 
 
-  <%= form_tag login_path do %>
-
-  <%= label_tag :email %>
-  <%= email_field_tag :email %>
-  <br>
-  <%= label_tag :password %>
-  <%= password_field_tag :password %>
-
-  <%= submit_tag 'Login' %>
-
-  <% end %>
+    <% end %>
+  </div>
 </div>

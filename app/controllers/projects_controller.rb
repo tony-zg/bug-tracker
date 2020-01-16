@@ -24,8 +24,11 @@ class ProjectsController < ApplicationController
   end
 
   def index
-    # @projects = Project.where user: @current_user
-    @projects = Project.all
+    @projects = Project.where user: @current_user
+
+    if @current_user.admin
+      @projects = Project.all
+    end
   end
 
   def show
@@ -46,9 +49,9 @@ class ProjectsController < ApplicationController
     # Actually update the database
 
     # @project.name = params[:name]
-    # raise 'hell'
       @project.update project_params
 
+    
     redirect_to project_path(@project.id)
   end
 

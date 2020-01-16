@@ -1,8 +1,10 @@
 body {
   font-family: Charlie Display, BlinkMacSystemFont,Segoe UI,Roboto,Noto Sans,Ubuntu,Droid Sans,Helvetica Neue,sans-serif;
   font-style: normal;
-  color: #253858;
+  color: #23374d;
   margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  background-color: #eeeeee;
 }
 
 .intro {
@@ -10,7 +12,7 @@ body {
 }
 
 a {
-  color:rgb(214, 225, 255)
+  color:#1089ff;
   text-decoration: none;
 }
 

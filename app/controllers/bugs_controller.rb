@@ -26,6 +26,7 @@ class BugsController < ApplicationController
 
   def show
     @bug = Bug.find params[:id]
+    @project_id = @bug.project.id
   end
 
   def edit
@@ -48,9 +49,11 @@ class BugsController < ApplicationController
   end
 
   def destroy
+
     Bug.destroy params[:id]
 
-    redirect_to bugs_path
+
+    redirect_to project_path(params[:project_id])
   end
 
   private
