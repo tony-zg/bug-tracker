@@ -1,42 +1,37 @@
 
-
+<div class="project_container">
 <%= form_for @project do |f| %>
-
+<table class="project_form">
   <tr>
-    <td class="labels"><%= f.label :name %></td>
-    <td class="labels_box"><%= f.text_field :name %></td>
+    <td class="project_labels"><%= f.label :name %></td>
+    <td class="project_labels_box"><%= f.text_field :name %></td>
   </tr>
-
   <tr>
-    <td class="labels">
-      <%= f.label :priority %></td>
-    <td class="labels_box">
-    <%= f.select :priority,['Low','Medium','High'] %>
+    <td class="project_labels"><%= f.label :priority %></td>
+    <td class="project_labels_box"><%= f.select :priority,['Low','Medium','High'] %>
     </td>
   </tr>
 
-
-
   <tr>
-    <td class="labels"><%= f.label :to,'Assigned to' %></td>
-    <td class="labels_box"><%= f.text_field :to %></td>
+    <td class="project_labels"><%= f.label :to,'Assigned to' %></td>
+    <td class="project_labels_box"><%= f.text_field :to %></td>
   </tr>
 
   <tr>
-    <td class="labels"><%= f.label :frontend %></td>
-    <td class="labels_box"><%= f.text_field :frontend %></td>
+    <td class="project_labels"><%= f.label :frontend %></td>
+    <td class="project_labels_box"><%= f.text_field :frontend %></td>
   </tr>
 
   <tr>
-    <td class="labels"><%= f.label :backend %></td>
-    <td class="labels_box"><%= f.text_field :backend %></td>
+    <td class="project_labels"><%= f.label :backend %></td>
+    <td class="project_labels_box"><%= f.text_field :backend %></td>
   </tr>
 
   <tr>
-    <td class="labels"><%= f.label :customer %></td>
-    <td class="labels_box"><%= f.text_field :customer %></td>
+    <td class="project_labels"><%= f.label :customer %></td>
+    <td class="project_labels_box"><%= f.text_field :customer %></td>
   </tr>
-
+</table>
   <br>
 
   <% User.all.each do |u| %>
@@ -47,3 +42,4 @@
   <br />
   <%= f.submit %>
 <% end  %>
+</div>

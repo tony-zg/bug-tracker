@@ -1,53 +1,23 @@
-body {
-  font-family: Charlie Display, BlinkMacSystemFont,Segoe UI,Roboto,Noto Sans,Ubuntu,Droid Sans,Helvetica Neue,sans-serif;
-  font-style: normal;
-  color: #23374d;
-}
-
-a {
-  color: #1089ff;
-  text-decoration: none;
-}
-
-a:hover {
-  opacity: 0.8;
-  text-decoration: underline;
-}
-
-input[type=text] {
+.project_container {
+  width:100%;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
 
 }
 
-input[type=text]:focus {
-  width: 40%;
+.project_form {
+
+  padding: 25px;
+  background: #e5e5e5;
+  width: 550px;
 }
 
-label {
-
-
+.project_labels {
+  text-align:left;
+  width: 100px;
 }
 
-input[type=submit] {
-  -webkit-appearance: none;
-    border: 1px solid transparent;
-    border-radius: 3px;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 16px;
-    line-height: 1.125;
-    padding: 10px 16px;
-    transition: all 250ms;
-    vertical-align: middle;
-    background-color: #0052CC;
-    border-color: #0052CC;
-    color: #FFF;
-}
-
-input[type=submit]:hover {
-  opacity: 0.95;
-}
-
-ul {
-    padding: 0;
-    list-style-type: none;
+.project_labels_box {
+    text-align:left;
+    width: 450px;
 }

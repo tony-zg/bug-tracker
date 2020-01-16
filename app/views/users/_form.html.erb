@@ -1,25 +1,29 @@
+<div class="bug_container">
+
 <%= form_for @user do |f| %>
+<table class="bug_form">
 
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <br>
+<tr>
+  <td class="project_labels"><%= f.label :name %></td>
+  <td class="project_labels_box"><%= f.text_field :name %></td>
+</tr>
+<tr>
+  <td class="project_labels"><%= f.label :email %></td>
+  <td class="project_labels_box"><%= f.email_field :email %></td>
+</tr>
+<tr>
+  <td class="project_labels"><%= f.label :password %></td>
+  <td class="project_labels_box"><%= f.password_field :password %></td>
+</tr>
 
-  <%= f.label :email %>
-  <%= f.email_field :email %>
-  <br>
+<tr>
+  <td class="project_labels"><%= f.label :password_confirmation %></td>
+  <td class="project_labels_box"><%= f.password_field :password_confirmation %></td>
+</tr>
+<tr>
+  <td class="bug_button"><%= f.submit  %></td>
+</tr>
 
-  <div class = "form-group">
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-  <br>
-  </div>
-
-  <div class = "form-group">
-  <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %>
-  <br>
-    </div>
-
-  <%= f.submit  %>
-
+</table>
  <% end %>
+ </div>

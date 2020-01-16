@@ -1,13 +1,8 @@
-body {
-  font-family: Charlie Display, BlinkMacSystemFont,Segoe UI,Roboto,Noto Sans,Ubuntu,Droid Sans,Helvetica Neue,sans-serif;
-  font-style: normal;
-  color: #23374d;
-}
 
 .container {
   width:100%;
 
-padding-top:2rem;
+  padding-top:2rem;
   padding-bottom:2rem;
 }
 
@@ -15,23 +10,43 @@ padding-top:2rem;
   text-align: center;
   width: 350px;
   border-radius: 8px;
-  background-color: #253858;
+  background-color: #e5e5e5;
   margin: auto;
-  padding: 20px;
-  color: #eeeeee;
+  padding: 30px;
+  color: #23374d;
+  border: 1px solid #23374d;
+
 }
 .labels{
   text-align: right;
   height: 25px;
+  width: 70px;
+  padding-right: 10px;
+
+
+
 }
 .labels_box{
   text-align: left;
-  padding-left: 20px;
+  padding-left: 10px;
   height: 25px;
+
 }
 
+
+input[type=text] {
+width: 100%;
+padding: 12px 20px;
+margin: 8px 0;
+display: inline-block;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+}
+
+
 input[type=email] {
-  width: 80%;
+width: 100%;
 padding: 8px 16px;
 margin: 8px 0;
 display: inline-block;
@@ -42,7 +57,7 @@ font-size: 15px;
 }
 
 input[type=password] {
-  width: 80%;
+width: 100%;
 padding: 8px 16px;
 margin: 8px 0;
 display: inline-block;
@@ -50,29 +65,4 @@ border: 1px solid #ccc;
 border-radius: 4px;
 box-sizing: border-box;
 font-size: 15px;
-}
-
-input[type=text]:focus {
-  width: 40%;
-}
-
-input[type=submit] {
-  -webkit-appearance: none;
-    border: 1px solid transparent;
-    border-radius: 3px;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 16px;
-    line-height: 1.125;
-    padding: 10px 16px;
-    transition: all 250ms;
-    vertical-align: middle;
-    background-color: #0052CC;
-    border-color: #0052CC;
-    color: #FFF;
-}
-
-input[type=submit]:hover {
-  opacity: 0.1;
-
 }
