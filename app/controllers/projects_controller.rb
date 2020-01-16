@@ -33,6 +33,7 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find params[:id]
+    redirect_to projects_path if @project == nil
   end
 
   def edit
@@ -51,7 +52,7 @@ class ProjectsController < ApplicationController
     # @project.name = params[:name]
       @project.update project_params
 
-    
+
     redirect_to project_path(@project.id)
   end
 
