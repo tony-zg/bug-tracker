@@ -8,6 +8,8 @@
 |
 <%= link_to 'Delete Project', project_path(@project.id), method: 'delete' %>
 |
+<%= link_to 'All Bugs', bugs_path %>
+|
 <%= link_to "Add Bug", new_bug_path(project_id: @project.id) %>
 
 <p><strong>Priority</strong>: <%= @project.priority  %></p>
@@ -40,6 +42,8 @@
             <% if bug.project.users.includes @current_user || @current_user.admin? %>
 
             <%= link_to "Edit", edit_bug_path(bug.id) %>
+            |
+            <%= link_to 'Delete', bug_path(bug.id), method: 'delete' %>
             <% end %>
         </li>
     <% end %>

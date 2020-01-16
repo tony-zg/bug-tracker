@@ -1,1 +1,15 @@
+<h2>All Bugs</h2>
 
+<ul>
+  <% @bugs.each do |bug| %>
+    <li>
+      <%= bug.name %>
+
+      <% if @current_user.admin == true %>
+        <%= link_to 'edit', edit_bug_path(bug.id) %>
+
+      <% end  %>
+
+    </li>
+  <% end  %>
+</ul>
