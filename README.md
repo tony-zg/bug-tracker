@@ -17,11 +17,8 @@ It is a Ruby on Rails project that makes bug tracking easy. Here is the link: ht
   Admin is in charged of everything included create, read, update and delete users, projects and bugs <br>
   </li>
   <li>
-  Please feel free to try out the accounts below: <br>
+  Please feel free to try out the accounts below, the first account is admin. <br>
   </li>
- 
-  The first account is admin. <br>
- 
   <li>
    email: tony@ga.com, password: chicken <br>
   </li>
@@ -58,8 +55,8 @@ UX and UI <br>
 </li>
 <li> 
 Images(screenshots for the bugs) <br>
-<li> 
-</li>
+</li> 
+<li>
 API for addressing where the bugs are from(optional) <br>
 </li>
 </ul>
