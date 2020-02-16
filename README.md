@@ -11,10 +11,10 @@ It is a Ruby on Rails project that makes bug tracking easy. Here is the link: ht
   Admin(manager) is the only user allowed to add projects, and same as what the user can do for projects and bugs <br>
   </li> 
   <li>
-  User can update and delete projects, and also create, update and delete bugs <br>
+  User can update and delete projects, plus create, update and delete bugs <br>
   </li> 
   <li>
-  New user need to be assigned new projects to be able to do things as user <br>
+  New user needs to be assigned a new project to be able to do things as user <br>
   </li> 
   <li>
   Please feel free to try out the accounts below, the first account is admin. <br>
