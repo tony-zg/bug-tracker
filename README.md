@@ -5,20 +5,17 @@ It is a Ruby on Rails project that makes bug tracking easy. Here is the link: ht
 # HOW TO USE
 <ul>
   <li>
-  A user needs to sign up and be able to use this application <br>
+  A user needs to login or sign up to be able to use this application <br>
   </li>
   <li>
-  Once signing up, admin(manager) is the only user allowed to assign projects to the users <br>
+  Admin(manager) is the only user allowed to add projects, and same as what the user can do for projects and bugs <br>
   </li> 
   <li>
-  Users can only create more bugs for the assigned projects <br>
+  User can update and delete projects, and also create, update and delete bugs <br>
   </li> 
   <li>
-  New users need to be assigned new projects to be able to create bugs <br>
+  New user need to be assigned new projects to be able to do things as user <br>
   </li> 
-  <li>
-  Admin is in charged of everything included create, read, update and delete users, projects and bugs <br>
-  </li>
   <li>
   Please feel free to try out the accounts below, the first account is admin. <br>
   </li>
