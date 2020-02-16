@@ -8,10 +8,13 @@ It is a Ruby on Rails project that makes bug tracking easy. Here is the link: ht
   A user needs to sign up and be able to use this application <br>
   </li>
   <li>
-  Once signing up, admin(manager) can assign projects to the users <br>
+  Once signing up, admin(manager) is the only user allowed to assign projects to the users <br>
   </li> 
   <li>
-  Users can also create more bugs for the projects that are assigned to the users <br>
+  Users can only create more bugs for the assigned projects <br>
+  </li> 
+  <li>
+  New users need to be assigned new projects to be able to create bugs <br>
   </li> 
   <li>
   Admin is in charged of everything included create, read, update and delete users, projects and bugs <br>
