@@ -8,10 +8,13 @@ It is a Ruby on Rails project that makes bug tracking easy. Here is the link: ht
   A user needs to login or sign up to be able to use this application <br>
   </li>
   <li>
-  Admin(manager) is the only user allowed to add projects, and same as what the user can do for projects and bugs <br>
+  Amin(manager) can view all the projects, but users can only view their own projects <br>
+  </li>
+  <li>
+  Admin is the only user allowed to add projects, and same as what the other users can do for projects and bugs <br>
   </li> 
   <li>
-  User can update and delete projects, plus create, update and delete bugs <br>
+  Users can update and delete projects, plus create, update and delete bugs <br>
   </li> 
   <li>
   New user needs to be assigned a new project to be able to do things as user <br>
