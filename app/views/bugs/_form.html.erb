@@ -9,32 +9,34 @@
   <td class="project_labels_box"> <%= f.text_field :name %></td>
 </tr>
 <tr>
-  <td class="project_labels"><%= f.label :priority %></td>
+  <td class="project_labels2">  <%= f.label :status %></td>
+  <td class="project_labels_box"><%= f.text_field :status %></td>
+</tr>
+<tr>
+  <td class="project_labels3"><%= f.label :priority %></td>
   <td class="project_labels_box"><%= f.select :priority,['Low','Medium','High'] %></td>
 </tr>
 <tr>
-  <td class="project_labels"> <%= f.label :to, 'Assigned to' %></td>
+  <td class="project_labels4"> <%= f.label :to, 'Assigned to' %></td>
   <td class="project_labels_box">
-    <select name="bug[user_id]" id="">
+    <select name="bug[user_id]" id="assigned_to">
         <% @bug.project.users.each do |user| %>
         <option value="<%= user.id %>"><%= user.name %></option>
         <% end %>
   </td>
 </tr>
+
 <tr>
-  <td class="project_labels">  <%= f.label :status %></td>
-  <td class="project_labels_box"><%= f.text_field :status %></td>
-</tr>
-<tr>
-  <td class="project_labels"><%= f.label :start_date %></td>
+  <td class="project_labels5"><%= f.label :start_date %></td>
   <td class="project_labels_box">  <%= f.date_field :start_date %></td>
 </tr>
 <tr>
-  <td class="project_labels">  <%= f.label :due_date %></td>
+  <td class="project_labels6">  <%= f.label :due_date %></td>
   <td class="project_labels_box">  <%= f.date_field :due_date %></td>
 </tr>
 
 <tr>
+  <td></td>
   <td class="bug_button"><%= f.submit  %></td>
 </tr>
 

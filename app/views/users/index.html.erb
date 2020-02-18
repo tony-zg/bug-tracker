@@ -3,7 +3,9 @@
 <ul>
   <% @users.each do |user| %>
     <li>
+      <span class=userName>
       <%= user.name %>
+      </span>
 
       <% if @current_user.admin == true %>
         <%= link_to 'edit', edit_user_path(user.id) %>

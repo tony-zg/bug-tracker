@@ -2,15 +2,20 @@
 <%= @bug.name %>
 </h2>
 
+<span class=bugLinkOne>
 <%= link_to 'Edit Bug', edit_bug_path(@bug.id) %>
-|
+</span>
+
+<span class=bugLinkTwo>
 <%= link_to 'Delete Bug', bug_path(@bug.id, :project_id=>@project_id), method: 'delete' %>
+</span>
 
 <p><strong>Priority</strong>: <%= @bug.priority  %></p>
 
-  <p><strong>Team Member</strong>: <%= @bug.user.name  %></p>
+<p><strong>Team Member</strong>: <%= @bug.user.name  %></p>
 
-  <p><strong>Status</strong>: <%= @bug.status  %></p>
+<p><strong>Status</strong>: <%= @bug.status  %></p>
 
-  <p><strong>Start Date</strong>: <%= @bug.start_date  %></p>
-  <p><strong>Due Date</strong>: <%= @bug.due_date  %></p>
+<p><strong>Start Date</strong>: <%= @bug.start_date  %></p>
+
+<p><strong>Due Date</strong>: <%= @bug.due_date  %></p>

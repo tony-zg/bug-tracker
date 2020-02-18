@@ -2,9 +2,24 @@ body {
   font-family: Charlie Display, BlinkMacSystemFont,Segoe UI,Roboto,Noto Sans,Ubuntu,Droid Sans,Helvetica Neue,sans-serif;
   font-style: normal;
   color: #23374d;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
   background-color: #eeeeee;
+
+}
+
+.background {
+  background-image: url(/assets/background.jpg);
+  filter: blur(5px);
+  position: fixed;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .intro {
@@ -30,6 +45,7 @@ ul {
 
 footer {
   text-align: center;
+
 }
 
 
@@ -53,6 +69,27 @@ input[type=submit]:hover {
   background-color: #0052CC;
 }
 
+.homeSecondHeader {
+  margin-bottom: 6rem;
+}
+
+.homeHeader {
+  margin-top: 6rem;
+}
+
+
+.loginSpaceOne {
+  padding-right: 3px;
+}
+
+.loginSpaceTwo {
+  padding-right: 3px;
+}
+
 @media only screen and (max-width: 600px) {
 
+}
+
+li {
+  margin:5px;
 }

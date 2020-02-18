@@ -2,15 +2,25 @@
 <%= @project.name %>
 </h2>
 
+<div class=project_space>
+<span class=projectLinkOne>
 <%= link_to 'All Projects', projects_path %>
-|
+</span>
+
+<span class=projectLinkTwo>
 <%= link_to 'Edit Project', edit_project_path(@project.id) %>
-|
+</span>
+
+<span class=projectLinkThree>
 <%= link_to 'Delete Project', project_path(@project.id), method: 'delete' %>
-|
+</span>
+
+<span class=projectLinkFour>
 <%= link_to 'All Bugs', bugs_path %>
-|
+</span>
+
 <%= link_to "Add Bug", new_bug_path(project_id: @project.id) %>
+</div>
 
 <p><strong>Priority</strong>: <%= @project.priority  %></p>
   <p><strong>Assigned to</strong>: <%= @project.to  %></p>
@@ -18,6 +28,7 @@
   <p><strong>Backend</strong>: <%= @project.backend  %></p>
   <p><strong>Customer</strong>: <%= @project.customer  %></p>
 
+<div class=projectHeadOne>
 <h2>Project Team members</h2>
 
   <ul>
@@ -29,22 +40,27 @@
         <% end %>
     <% end %>
   </ul>
+</div>
 
-
+<div class=projectHeadTwo>
 <h2>Project's Bugs</h2>
 
 <ul>
   <% if @project.bugs.present?  %>
     <% @project.bugs.each do |bug| %>
         <li>
+          <span class=projectBugLinkOne>
           <%= link_to bug.name, bug_path(bug.id) %>
+          </span>
 
-            <% if bug.project.users.includes @current_user || @current_user.admin? %>
+          <% if bug.project.users.includes @current_user || @current_user.admin? %>
 
-            <%= link_to "Edit", edit_bug_path(bug.id) %>
-            |
-            <%= link_to 'Delete', bug_path(bug.id), method: 'delete' %>
-            <% end %>
+          <span class=projectBugLinkTwo>
+          <%= link_to "Edit", edit_bug_path(bug.id) %>
+          </span>
+
+          <%= link_to 'Delete', bug_path(bug.id), method: 'delete' %>
+          <% end %>
         </li>
     <% end %>
 
@@ -52,3 +68,4 @@
       <p>This project has no bugs.</p>
   <% end %>
 </ul>
+</div>

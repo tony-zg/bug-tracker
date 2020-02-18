@@ -3,7 +3,9 @@
 <ul>
   <% @bugs.each do |bug| %>
     <li>
+      <span class=bugOne>
       <%= bug.name %>
+      </span>
 
       <% if @current_user.admin == true %>
         <%= link_to 'edit', edit_bug_path(bug.id) %>
