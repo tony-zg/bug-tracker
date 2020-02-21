@@ -8,7 +8,6 @@ class ProjectsController < ApplicationController
 
   def create
 
-    # raise 'hell'
 
     # 1.
     #project = Project.create name: params[:project][:name], user: @current_user
@@ -18,17 +17,25 @@ class ProjectsController < ApplicationController
     #@current_user.projects << project
 
     # 3.
-    @current_user.projects.create project_params
 
-    redirect_to projects_path #index of projects
+    puts "CREATE"
+    p project_params
+
+    # @current_user.projects.create project_params
+    Project.create project_params
+
+    # raise 'hell'
+
+    redirect_to user_path(@current_user)	 #index of projects
   end
 
   def index
-    @projects = Project.where user: @current_user
 
     if @current_user.admin
       @projects = Project.all
     end
+
+    @projects = @current_user.projects
   end
 
   def show

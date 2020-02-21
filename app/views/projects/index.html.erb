@@ -1,7 +1,7 @@
 <h2>All Projects</h2>
 
 <ul>
-  <% @projects.each do |project| %>
+  <% @projects.uniq.each do |project| %>
   <li>
 
     <span class=projectName>

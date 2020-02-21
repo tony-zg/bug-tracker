@@ -1,11 +1,3 @@
-.userShowOne {
-  padding-right: 6px;
-}
-
-.userShowTwo {
-  padding-right: 6px;
-}
-
-.userName {
+.userShowOne, .userShowTwo, .userShowThree, .userName {
   padding-right: 6px;
 }

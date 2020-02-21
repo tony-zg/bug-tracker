@@ -2,10 +2,6 @@
 <%= @project.name %>
 </h2>
 
-<div class=project_space>
-<span class=projectLinkOne>
-<%= link_to 'All Projects', projects_path %>
-</span>
 
 <span class=projectLinkTwo>
 <%= link_to 'Edit Project', edit_project_path(@project.id) %>
@@ -20,7 +16,7 @@
 </span>
 
 <%= link_to "Add Bug", new_bug_path(project_id: @project.id) %>
-</div>
+
 
 <p><strong>Priority</strong>: <%= @project.priority  %></p>
   <p><strong>Assigned to</strong>: <%= @project.to  %></p>
@@ -59,7 +55,7 @@
           <%= link_to "Edit", edit_bug_path(bug.id) %>
           </span>
 
-          <%= link_to 'Delete', bug_path(bug.id), method: 'delete' %>
+          <%= link_to 'Delete', bug_path(bug.id, project_id: @project.id), method: 'delete'   %>
           <% end %>
         </li>
     <% end %>

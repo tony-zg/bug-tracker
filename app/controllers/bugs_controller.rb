@@ -49,10 +49,8 @@ class BugsController < ApplicationController
   end
 
   def destroy
-
     Bug.destroy params[:id]
-
-
+    
     redirect_to project_path(params[:project_id])
   end
 

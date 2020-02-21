@@ -1,23 +1,9 @@
-<% if @user.admin == true  %>
-<br>
 
-<span class=userShowOne>
-<%= link_to 'All Users', users_path %>
-</span>
-
-<span class=userShowTwo>
-<%= link_to 'All Projects', projects_path  %>
-</span>
-
-<%= link_to 'Add Project', new_project_path  %>
-
-<% end  %>
-
-<h2>Profile Page for <%= @user.name %></h2>
+<h2 class="profile_header">Profile Page for <%= @user.name %></h2>
 
 
 <ul>
-  <% @user.projects.each do |project| %>
+  <% @user.projects.uniq.each do |project| %>
   <li>
     <%= link_to project.name, project_path(project.id) %>
     <% end  %>

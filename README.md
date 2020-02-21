@@ -11,16 +11,10 @@ It is a Ruby on Rails project that makes bug tracking easy. Here is the link: ht
   Amin(manager) can view all the projects, but users can only view their own projects <br>
   </li>
   <li>
-  Admin is the only user allowed to add projects, and same as what the other users can do for projects and bugs <br>
+  Amin and Users can create, update and delete projects and bugs <br>
   </li>
   <li>
-  Users can update and delete projects, plus create, update and delete bugs <br>
-  </li>
-  <li>
-  New user needs to be assigned a new project to be able to do things as user <br>
-  </li>
-  <li>
-  Please feel free to try out the accounts below, the first account is admin. <br>
+  Please feel free to try out the accounts below, the first account is admin <br>
   </li>
   <li>
    email: tony@ga.com, password: chicken <br>

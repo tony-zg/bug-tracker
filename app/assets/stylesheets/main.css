@@ -78,18 +78,14 @@ input[type=submit]:hover {
 }
 
 
-.loginSpaceOne {
+.loginSpaceOne, .loginSpaceTwo {
   padding-right: 3px;
-}
-
-.loginSpaceTwo {
-  padding-right: 3px;
-}
-
-@media only screen and (max-width: 600px) {
-
 }
 
 li {
   margin:5px;
+}
+
+.profile_header {
+  margin-top: 5vh;
 }
