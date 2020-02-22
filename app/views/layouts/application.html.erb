@@ -17,11 +17,15 @@
     <header>
 
       <nav>
-      <% if @current_user.present? %>
+
+      <% if @current_user.present? && @current_user.admin %>
 
         <span class="userShowOne">
-        <%= link_to 'All Users', users_path %>
+          <%= link_to 'All Users', users_path %>
         </span>
+      <% end  %>
+
+      <% if @current_user.present? %>
 
         <span class="userShowTwo">
         <%= link_to 'All Projects', projects_path  %>
@@ -40,6 +44,7 @@
 
           <% if @current_user.admin? %>
            (admin)
+
           <% end  %>
       </span>
           <%= link_to 'Logout', login_path, method: 'delete' %>

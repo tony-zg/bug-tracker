@@ -8,7 +8,7 @@ It is a Ruby on Rails project that makes bug tracking easy. Here is the link: ht
   A user needs to login or sign up to be able to use this application <br>
   </li>
   <li>
-  Amin(manager) can view all the projects, but users can only view their own projects <br>
+  Amin(manager) can view all the projects and edit all the users who can only view their own projects <br>
   </li>
   <li>
   Amin and Users can create, update and delete projects and bugs <br>

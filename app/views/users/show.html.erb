@@ -1,9 +1,18 @@
 
 <h2 class="profile_header">Profile Page for <%= @user.name %></h2>
 
-
+<h3>Created Projects:</h3>
 <ul>
-  <% @user.projects.uniq.each do |project| %>
+  <% @user.created_projects.each do |project| %>
+  <li>
+    <%= link_to project.name, project_path(project.id) %>
+    <% end  %>
+  </li>
+</ul>
+
+<h3>Assigned Projects:</h3>
+<ul>
+  <% @user.projects.each do |project| %>
   <li>
     <%= link_to project.name, project_path(project.id) %>
     <% end  %>
