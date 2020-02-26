@@ -18,11 +18,8 @@ class ProjectsController < ApplicationController
 
     # 3.
 
-    # Project.create user_params, user_id: @current_user.id
-
-    @current_user.created_projects.create project_params
-
-
+    # @current_user.projects.create project_params
+    Project.create project_params
 
     # raise 'hell'
 
