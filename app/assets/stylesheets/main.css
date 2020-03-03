@@ -89,3 +89,17 @@ li {
 .profile_header {
   margin-top: 5vh;
 }
+
+.loginContainer {
+  float: right;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    margin-top:12vh;
+  }
+
+  .loginContainer{
+    float: none;
+  }
+}
