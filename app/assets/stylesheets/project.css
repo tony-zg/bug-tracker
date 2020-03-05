@@ -17,6 +17,8 @@
 .project_labels {
   text-align:left;
   width: 100px;
+  line-height:20px;
+  text-transform: capitalize
 }
 
 .project_labels_box {
