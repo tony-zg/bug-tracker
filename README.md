@@ -2,9 +2,9 @@
 
 It is a Ruby on Rails project that makes bug tracking easy. Here is the link: https://bug-tracker-tg.herokuapp.com/
 
-<h2>IMAGE</h2>
+# IMAGE
 
-<img src="/images/p2.png" width="1400px" height="500px">
+<img src="app/assets/images/p2.png" width="1400px" height="500px">
 
 # HOW TO USE
 <ul>
@@ -55,9 +55,9 @@ Deployed on Heroku <br>
 UX and UI <br>
 </li>
 <li>
-Images(screenshots for the bugs) <br>
+Google Map API for addressing where the projects are from <br>
 </li>
 <li>
-API for addressing where the bugs are from(optional) <br>
+Image for bug(optional) <br>
 </li>
 </ul>
