@@ -4,7 +4,7 @@ It is a Ruby on Rails project that makes bug tracking easy. Here is the link: ht
 
 <h2>IMAGE</h2>
 
-<img src="/assets/images/p2.png" width="1400px" height="500px">
+<img src="/images/p2.png" width="1400px" height="500px">
 
 # HOW TO USE
 <ul>
