@@ -2,6 +2,10 @@
 
 It is a Ruby on Rails project that makes bug tracking easy. Here is the link: https://bug-tracker-tg.herokuapp.com/
 
+<h2>IMAGE</h2>
+
+<img src="/assets/p1.png" width="1400px" height="500px">
+
 # HOW TO USE
 <ul>
   <li>
