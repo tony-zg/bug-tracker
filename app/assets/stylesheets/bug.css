@@ -89,3 +89,28 @@
 table.bug_form > tbody > tr {
   line-height: 10vh;
 }
+
+.bug_form_two {
+  background-color: #e5e5e5;
+  padding: 45px;
+  width: 550px;
+  border-radius: 8px;
+  border: 1px solid #23374d;
+}
+
+table.bug_form_two > tbody > tr {
+  line-height: 10vh;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  .bug_form {
+    padding: 24px;
+  }
+
+  .bug_form_two {
+    padding: 9px;
+    width: auto;
+  }
+}

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BugTracker</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -17,7 +18,7 @@
     <header>
 
       <nav>
-
+      <span class="home"><%= link_to 'Home', root_path %></span>
       <% if @current_user.present? && @current_user.admin %>
 
         <span class="userShowOne">
@@ -26,7 +27,7 @@
       <% end  %>
 
       <% if @current_user.present? %>
-
+        <span class="project_links">
         <span class="userShowTwo">
         <%= link_to 'All Projects', projects_path  %>
         </span>
@@ -34,26 +35,27 @@
         <span class="userShowThree">
         <%= link_to 'Add Project', new_project_path  %>
         </span>
+        </span>
 
       <% end  %>
 
       <span class="loginContainer">
-      <span class="loginSpaceOne">
-      <% if @current_user.present? %>
-          Welcome, <%= @current_user.name %>
+        <span class="loginSpaceOne">
+          <% if @current_user.present? %>
+            Welcome, <%= @current_user.name %>
 
           <% if @current_user.admin? %>
-           (admin)
+             (admin)
 
           <% end  %>
-      </span>
-          <%= link_to 'Logout', login_path, method: 'delete' %>
-        <% else %>
-          <span class="loginSpaceTwo">
-          <%= link_to 'Login', login_path %>
-          </span>
-          <%= link_to 'Sign Up', new_user_path %>
-        <% end %>
+        </span>
+            <%= link_to 'Logout', login_path, method: 'delete' %>
+          <% else %>
+            <span class="loginSpaceTwo">
+              <%= link_to 'Login', login_path %>
+            </span>
+            <%= link_to 'Sign Up', new_user_path %>
+          <% end %>
       </nav>
       </span>
       <br>

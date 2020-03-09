@@ -66,3 +66,33 @@ input[type=password] {
   box-sizing: border-box;
   font-size: 15px;
 }
+
+@media only screen and (max-width: 600px) {
+  body {
+    margin-top:8vh;
+    margin-bottom:8vh;
+    width: 85%;
+    margin: auto;
+  }
+
+  .loginContainer {
+    float: none;
+  }
+
+  .login {
+    width: auto;
+    padding: 24px;
+  }
+
+  .project_form {
+    width: auto;
+  }
+
+  table.bug_form {
+    width: auto;
+  }
+
+  .loginContainer, .project_links {
+    display: block;
+  }
+}

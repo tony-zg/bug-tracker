@@ -15,7 +15,7 @@ body {
   z-index: -1;
   left: 0;
   top: 0;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -45,6 +45,7 @@ ul {
 
 footer {
   text-align: center;
+  padding-bottom: 30px;
 
 }
 
@@ -88,14 +89,4 @@ li {
 
 .loginContainer {
   float: right;
-}
-
-@media only screen and (max-width: 600px) {
-  body {
-    margin-top:12vh;
-  }
-
-  .loginContainer{
-    float: none;
-  }
 }
